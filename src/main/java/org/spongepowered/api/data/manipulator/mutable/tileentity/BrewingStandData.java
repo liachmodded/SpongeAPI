@@ -44,4 +44,14 @@ public interface BrewingStandData extends DataManipulator<BrewingStandData, Immu
      */
     MutableBoundedValue<Integer> remainingBrewTime();
 
+    /**
+     * Gets the {@link MutableBoundedValue} for the remaining times the stand
+     * can brew.
+     *
+     * <p>If there is no fuel the value is 0.</p>
+     *
+     * @return The value for the remaining brew time
+     */
+    MutableBoundedValue<Integer> remainingFuel();
+
 }

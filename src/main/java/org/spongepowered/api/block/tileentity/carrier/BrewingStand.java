@@ -24,6 +24,8 @@
  */
 package org.spongepowered.api.block.tileentity.carrier;
 
+import org.spongepowered.api.data.manipulator.mutable.tileentity.BrewingStandData;
+
 /**
  * Represents a Brewing Stand.
  */
@@ -37,5 +39,14 @@ public interface BrewingStand extends TileEntityCarrier {
      * @return If the brew was successful
      */
     boolean brew();
+
+    /**
+     * Gets the brewing stand's {@link BrewingStandData}.
+     *
+     * @return The brewing stand data
+     */
+    default BrewingStandData getBrewingStandData() {
+        return get(BrewingStandData.class).get();
+    }
 
 }
