@@ -45,6 +45,7 @@ import org.spongepowered.api.effect.potion.PotionEffect;
 import org.spongepowered.api.effect.potion.PotionEffectType;
 import org.spongepowered.api.item.potion.PotionType;
 import org.spongepowered.api.entity.*;
+import org.spongepowered.api.entity.ai.navigation.Navigator;
 import org.spongepowered.api.entity.explosive.Explosive;
 import org.spongepowered.api.entity.explosive.FusedExplosive;
 import org.spongepowered.api.entity.hanging.ItemFrame;
@@ -929,6 +930,14 @@ public final class Keys {
      * @see MovementSpeedData#flySpeed()
      */
     public static final Key<Value<Double>> FLYING_SPEED = DummyObjectProvider.createExtendedFor(Key.class,"FLYING_SPEED");
+
+    /**
+     * Represents the {@link Key} for the following range of an {@link Agent}.
+     *
+     * @see AgentData#followRange()
+     * @see Navigator#getFollowRange()
+     */
+    public static final Key<MutableBoundedValue<Double>> FOLLOW_RANGE = DummyObjectProvider.createExtendedFor(Key.class, "FOLLOW_RANGE");
 
     /**
      * Represents the {@link Key} for the food level of a {@link Humanoid}.
